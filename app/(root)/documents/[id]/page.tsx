@@ -6,7 +6,9 @@ const Document = () => {
   return (
     <div>
       <Header>
-        <p className="">Test</p>
+        <div className="flex w-fit items-center justify-center gap-2">
+          <p>This is a fake title</p>
+        </div>
       </Header>
       <Editor />
     </div>
