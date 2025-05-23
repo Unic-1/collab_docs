@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import Provider from "./Provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,7 +32,9 @@ export default function RootLayout({
     >
       <html lang="en" suppressHydrationWarning>
         <head></head>
-        <body className={cn(fontSans.variable)}>{children}</body>
+        <body className={cn(fontSans.variable)}>
+          <Provider>{children}</Provider>
+        </body>
       </html>
     </ClerkProvider>
   );
